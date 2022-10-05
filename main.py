@@ -1,5 +1,6 @@
 import tweepy
 import keys 
+from scraper import line_print
 
 def api():
     auth = tweepy.OAuthHandler(keys.API_KEY, keys.API_SECRET)
@@ -17,4 +18,4 @@ def tweet (api: tweepy.API, message: str, image_path:None):
 
 if __name__ == "__main__": 
     api = api()
-    tweet(api, 'Mathematical!', None)
+    tweet(api, line_print, None)
